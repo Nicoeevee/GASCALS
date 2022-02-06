@@ -1,0 +1,1 @@
+﻿#include "MGCGameFeaturePluginTemplateDescription.h"

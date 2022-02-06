@@ -1,0 +1,9 @@
+[submodule "Plugins/Flow"]
+	path = Plugins/Flow
+	url = https://github.com/MothCocoon/FlowGraph.git
+[submodule "Plugins/ALS-Community"]
+	path = Plugins/ALS-Community
+	url = https://github.com/dyanikoglu/ALS-Community.git
+[submodule "Plugins/GASCompanionALS"]
+	path = Plugins/GASCompanionALS
+	url = https://github.com/GASCompanion/GASCompanionALS.git

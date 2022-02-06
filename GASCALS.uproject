@@ -44,6 +44,10 @@
 		{
 			"Name": "EnhancedInput",
 			"Enabled": true
+		},
+		{
+			"Name": "GASCompanionExamples",
+			"Enabled": true
 		}
 	]
 }
