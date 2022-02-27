@@ -57,6 +57,11 @@
 			"Name": "GASCompanion",
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/d83c6f34c3fb4b7092dde195c37c7413"
+		},
+		{
+			"Name": "GASAttachEditor",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/faabce60b69a4f38ac1242953ab97b14"
 		}
 	]
 }

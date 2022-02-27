@@ -5,6 +5,7 @@
 
 #include "EnhancedInputSubsystems.h"
 #include "ModularGASCompanionLog.h"
+#include "ModularGameplayActors/GSCALSModCharacter.h"
 #include "ModularGameplayActors/ModularCharacter.h"
 #include "ModularGameplayActors/ModularPawn.h"
 #include "ModularGameplayActors/ModularPlayerStateCharacter.h"
@@ -42,6 +43,11 @@ void UMGCPlayerControlsComponent::OnRegister()
 		{
 			ModularCharacter->ReceiveCharacterRestartedDelegate.AddDynamic(this, &UMGCPlayerControlsComponent::OnPawnRestarted);
 			ModularCharacter->ReceiveCharacterControllerChangedDelegate.AddDynamic(this, &UMGCPlayerControlsComponent::OnControllerChanged);
+		}
+		else if (AGSCALSModCharacter* ALSModularCharacter = GetPawn<AGSCALSModCharacter>())
+		{
+			ALSModularCharacter->ReceiveCharacterRestartedDelegate.AddDynamic(this, &UMGCPlayerControlsComponent::OnPawnRestarted);
+			ALSModularCharacter->ReceiveCharacterControllerChangedDelegate.AddDynamic(this, &UMGCPlayerControlsComponent::OnControllerChanged);
 		}
 		else if (AModularPlayerStateCharacter* ModularPlayerStateCharacter = GetPawn<AModularPlayerStateCharacter>())
 		{
@@ -93,6 +99,11 @@ void UMGCPlayerControlsComponent::OnUnregister()
 		{
 			ModularCharacter->ReceiveCharacterRestartedDelegate.RemoveAll(this);
 			ModularCharacter->ReceiveCharacterControllerChangedDelegate.RemoveAll(this);
+		}
+		else if (AGSCALSModCharacter* ALSModularCharacter = GetPawn<AGSCALSModCharacter>())
+		{
+			ALSModularCharacter->ReceiveCharacterRestartedDelegate.RemoveAll(this);
+			ALSModularCharacter->ReceiveCharacterControllerChangedDelegate.RemoveAll(this);
 		}
 		else if (AModularPlayerStateCharacter* ModularPlayerStateCharacter = GetPawn<AModularPlayerStateCharacter>())
 		{

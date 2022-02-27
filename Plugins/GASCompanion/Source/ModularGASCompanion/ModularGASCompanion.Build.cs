@@ -37,6 +37,7 @@ public class ModularGASCompanion : ModuleRules
 				"EnhancedInput",
 				"GameFeatures",
 				"Json",
+				 "ALSV4_CPP",
 				// ... add other public dependencies that you statically link with here ...
 			}
 		);
@@ -46,7 +47,7 @@ public class ModularGASCompanion : ModuleRules
 			new string[]
 			{
 				// ... add private dependencies that you statically link with here ...
-				"GASCompanion",
+				"GASCompanion", 
 			}
 		);
 
